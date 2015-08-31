@@ -7,4 +7,7 @@ use App\Http\Controllers\Controller;
 	public function index(){
 		return view('home.index');
 	}
+	public function contact(){
+		return view('home.contact');
+	}
 }

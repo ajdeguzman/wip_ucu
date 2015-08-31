@@ -37,7 +37,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Oops! Service Unavailable. Be Right Back.</div>
+                <div class="title">Oops! Sorry, page not found.</div>
             </div>
         </div>
     </body>
