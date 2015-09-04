@@ -13,3 +13,10 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/about/contact-us', 'HomeController@contact');
+Route::get('/about/history', 'HomeController@history');
+Route::get('/about/vmgo', 'HomeController@vm');
+Route::get('/about/seal', 'HomeController@seal');
+Route::get('/about/hymn', 'HomeController@hymn');
+Route::get('/about/maps', 'HomeController@maps');
+Route::get('/about/highlights', 'HomeController@highlights');
+Route::get('/about/administration', 'HomeController@administration');

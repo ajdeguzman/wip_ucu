@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Be right back.</title>
+        <title>Error 404 - Page not found</title>
 
         <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 

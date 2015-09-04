@@ -21,10 +21,10 @@
                             speed: 500,
                             namespace: "callbacks",
                             before: function() {
-                                $('.events').append("<li>before event fired.</li>");
+                                //$('.events').append("<li>before event fired.</li>");
                             },
                             after: function() {
-                                $('.events').append("<li>after event fired.</li>");
+                                //$('.events').append("<li>after event fired.</li>");
                             }
                         });
                     });
@@ -53,7 +53,7 @@
         </div>
 
 
-        <div class="latest-designs">
+        <div class="news-events">
             <div class="container">
                 <section class="component-row"><div class="container"><div class="row outer">
                     <div class="col-sm-4">
@@ -73,8 +73,8 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="block events1">
-                            <h3 class="block-header"><a href="http://events.ucu.edu">Events</a></h3>
+                        <div class="block events-list">
+                            <h3 class="block-header">Events</h3>
                             <ul class="media-list">
                                 <li class="media">
                                     <div class="media-left">
@@ -83,7 +83,7 @@
                                         </div>
                                     </div>
                                     <div class="media-body">
-                                        <h4><a href="http://events.ucu.edu/?event_ID=90096">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
+                                        <h4><a href="http://events.ucu.edu.ph/?event_ID=90096">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
                                     </div>
                                 </li>
                                 <li class="media">
@@ -93,7 +93,7 @@
                                         </div>
                                     </div>
                                     <div class="media-body">
-                                        <h4><a href="http://events.ucu.edu/?event_ID=90096">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
+                                        <h4><a href="http://events.ucu.edu.ph/?event_ID=90096">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
                                     </div>
                                 </li>
                                 <li class="media">
@@ -103,11 +103,11 @@
                                         </div>
                                     </div>
                                     <div class="media-body">
-                                        <h4><a href="http://events.ucu.edu/?event_ID=90096">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
+                                        <h4><a href="http://events.ucu.edu.ph/?event_ID=90096">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></h4>
                                     </div>
                                 </li>
                             </ul>
-                            <div class="more-link"><a href="http://events.ucu.edu">More events</a></div>
+                            <div class="more-link"><a href="http://events.ucu.edu.ph">More events</a></div>
                         </div>
                     </div>
                     </div><!-- /.row -->
@@ -115,66 +115,6 @@
             </section>
         </div>
         </div>
-       <!--  <div class="latest-designs">
-           <div class="container">
-               <div class="gallery-info">
-                   <ul class="demo-1 effect">
-                       <li>
-                           <h2>Lorem ipsum</h2>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                       </li>
-                       <li><img class="top" src="http://placehold.it/340x250" alt=""/></li>
-                   </ul>
-                   <li>
-                       <ul class="demo-1 effect">
-                           <li>
-                               <h2>Lorem ipsum</h2>
-                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                           </li>
-                           <li><img class="top" src="http://placehold.it/340x250" alt=""/></li>
-                       </ul>
-                   </li>
-                   <li>
-                       <ul class="demo-1 effect">
-                           <li>
-                               <h2>Lorem ipsum</h2>
-                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                           </li>
-                           <li><img class="top" src="http://placehold.it/340x250" alt=""/></li>
-                       </ul>
-                   </li>
-                   <li>
-                       <ul class="demo-1 effect">
-                           <li>
-                               <h2>Lorem ipsum</h2>
-                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                           </li>
-                           <br>
-                           <li><img class="top" src="http://placehold.it/340x250" alt=""/></li>
-                       </ul>
-                   </li>
-                   <li>
-                       <ul class="demo-1 effect">
-                           <li>
-                               <h2>Lorem ipsum</h2>
-                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                           </li>
-                           <li><img class="top" src="http://placehold.it/340x250" alt=""/></li>
-                       </ul>
-                   </li>
-                   <li>
-                       <ul class="demo-1 effect">
-                           <li>
-                               <h2>Lorem ipsum</h2>
-                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-                           </li>
-                           <li><img class="top" src="http://placehold.it/340x250" alt=""/></li>
-                       </ul>
-                   </li>
-                   <div class="clearfix"> </div>
-               </div>
-           </div>
-       </div> -->
         <div class="index-about">
             <div class="container">
                 <h3>About</h3>

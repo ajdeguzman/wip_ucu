@@ -6,6 +6,7 @@
         <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
         <link href="{{ URL::asset('css/yamm.css') }}" rel="stylesheet" type="text/css" media="all" />
         <link href="{{ URL::asset('css/font.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{{ URL::asset('css/timeline.css') }}" rel="stylesheet" type="text/css" media="all" />
         <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('images/favicon.ico') }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -13,8 +14,10 @@
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
                 <script language="JavaScript" src="{{ URL::asset('/') }}js/jquery.min.js"></script>
                 <script language="JavaScript" src="{{ URL::asset('/') }}js/bootstrap.js"></script>
+                <script language="JavaScript" src="{{ URL::asset('/') }}js/modernizr.js"></script>
                 <script language="JavaScript" src="{{ URL::asset('/') }}js/easing.js"></script>
                 <script language="JavaScript" src="{{ URL::asset('/') }}js/move-top.js"></script>
+                <script language="JavaScript" src="{{ URL::asset('/') }}js/main.js"></script>
                 <script type="text/javascript">
                         jQuery(document).ready(function($) {
                             $(".scroll").click(function(event) {
@@ -27,7 +30,7 @@
                 </script>
             </head>
             <body>
-                <nav class="navbar yamm navbar-default navbar-static-top">
+                <!-- <nav class="navbar yamm navbar-default navbar-static-top">
                     <div class="container">
                         <div class="navbar-header">
                             <div>
@@ -40,167 +43,208 @@
                         </div>
                         <div class="collapse navbar-collapse" id="navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active">
+                                <li>
                                     <a href="{{ Config::get('app.url')  }}/#">Home</a>
                                 </li>
-                                <li class="dropdown yamm-fw">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admissions <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                       <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-sm-7">
-                                                        <div class="caption hidden-xs">
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <img src="http://placehold.it/249x166" alt="">
-                                                                </div>
-                                                                <div class="col-sm-6"><div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vel, sit eligendi. Consectetur enim accusamus dolores architecto sed itaque illum laudantium, aspernatur a iste temporibus, aliquid dicta amet, consequatur praesentium!</p></div></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-5">
-                                                        <div class="subnav">
-                                                            <div class="row">
-                                                                <div class="col-sm-6"><ul class="list-unstyled">
-                                                                    <li><a href="#" aria-describedby="campus-life" class="">Application and Enrolment Procedures</a></li>
-                                                                    <li><a href="#" class="">Scholarship Grants</a></li>
-                                                                    <li><a href="#" class="">Graduate</a></li>
-                                                                    <li><a href="#" class="">Undergraduate</a></li>
-                                                                </ul></div>
-                                                                <div class="col-sm-6"><ul class="list-unstyled">
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/arts-culture" class="">Law</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/student-organizations" class="">Entrance Examination</a></li>
-                                                                </ul></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                       </li>
-                                     </ul>
-                                </li>
-                                <li class="dropdown yamm-fw">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Academics <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                       <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-sm-7">
-                                                        <div class="caption hidden-xs">
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <img src="http://placehold.it/249x166" alt="">
-                                                                </div>
-                                                                <div class="col-sm-6"><div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vel, sit eligendi. Consectetur enim accusamus dolores architecto sed itaque illum laudantium, aspernatur a iste temporibus, aliquid dicta amet, consequatur praesentium!</p></div></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-5">
-                                                        <div class="subnav">
-                                                            <div class="row">
-                                                                <div class="col-sm-6"><ul class="list-unstyled">
-                                                                    <li><a href="#" aria-describedby="campus-life" class="">Graduate School</a></li>
-                                                                    <li><a href="#" class="">Colleges</a></li>
-                                                                    <li><a href="#" class="">Center for Continuing and Professional Development</a></li>
-                                                                    <li><a href="#" class="">Research &amp; Extensions</a></li>
-                                                                </ul></div>
-                                                                <div class="col-sm-6"><ul class="list-unstyled">
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/arts-culture" class="">UCU Student Portal</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/student-organizations" class="">Faculty Profile</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/health-safety" class="">Academic Calendar</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/health-safety" class="">UCU OPAC</a></li>
-                                                                </ul></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                       </li>
-                                     </ul>
-                                </li>
-                                <li class="dropdown yamm-fw">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Campus Life <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                       <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-sm-7">
-                                                        <div class="caption hidden-xs">
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <img src="http://placehold.it/249x166" alt="">
-                                                                </div>
-                                                                <div class="col-sm-6"><div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vel, sit eligendi. Consectetur enim accusamus dolores architecto sed itaque illum laudantium, aspernatur a iste temporibus, aliquid dicta amet, consequatur praesentium!</p></div></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-5">
-                                                        <div class="subnav">
-                                                            <div class="row">
-                                                                <div class="col-sm-6"><ul class="list-unstyled">
-                                                                    <li><a href="#" aria-describedby="campus-life" class="">Student Development</a></li>
-                                                                    <li><a href="#" class="">Guidance and Counseling</a></li>
-                                                                    <li><a href="#" class="">Student Organizations</a></li>
-                                                                    <li><a href="#" class="">Library</a></li>
-                                                                </ul></div>
-                                                                <div class="col-sm-6"><ul class="list-unstyled">
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/arts-culture" class="">Arts &amp; Culture</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/student-organizations" class="">Civil Welfare</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/health-safety" class="">Athletics</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/volunteering" class="">Publications</a></li>
-                                                                </ul></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                       </li>
-                                     </ul>
-                                </li>
-                                <li class="dropdown yamm-fw">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">About <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                       <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-sm-7">
-                                                        <div class="caption hidden-xs">
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <img src="http://placehold.it/249x166" alt="">
-                                                                </div>
-                                                                <div class="col-sm-6"><div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vel, sit eligendi. Consectetur enim accusamus dolores architecto sed itaque illum laudantium, aspernatur a iste temporibus, aliquid dicta amet, consequatur praesentium!</p></div></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-5">
-                                                        <div class="subnav">
-                                                            <div class="row">
-                                                                <div class="col-sm-6"><ul class="list-unstyled">
-                                                                    <li><a href="#" aria-describedby="campus-life" class="">History</a></li>
-                                                                    <li><a href="#" class="">Mission &amp; Vision</a></li>
-                                                                    <li><a href="#" class="">Administration</a></li>
-                                                                    <li><a href="#" class="">University Hymn</a></li>
-                                                                </ul></div>
-                                                                <div class="col-sm-6"><ul class="list-unstyled">
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/arts-culture" class="">UCU Highlights</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/student-organizations" class="">Campus Map</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/campus-life/volunteering" class="">Logo &amp; Symbols</a></li>
-                                                                    <li><a href="{{ Config::get('app.url')  }}/about/contact-us" class="">Contact Us</a></li>
-                                                                </ul></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                       </li>
-                                     </ul>
-                                </li>
+
+                                
                             </ul>
                             <div class="clearfix"> </div>
                         </div>
-                    </nav>
+                    </nav> -->
+                    <header id="site-header" class="light">
+                            <div class="navbar navbar-default navbar-static-top yamm">
+                                <div class="container">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <h1>
+                                        <a href="{{ Config::get('app.url')  }}" class="navbar-brand" title="UCU" rel="home">
+                                        <span class="navbar-brand-blue"><img alt="UCU" src="{{ URL::asset('/') }}images/ucu_logo.png"></span>
+                                        <span class="navbar-brand-white"><img alt="UCU" src="{{ URL::asset('/') }}images/ucu_logo_white_text.png"></span>
+                                        </a>
+                                        </h1>
+                             <button class="menu-button navbar-toggle" id="menuButton" data-toggle="collapse" data-target="#main-nav">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="burger-icon"></span>
+                                    </div>
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="main-nav">
+                                        <nav id="primary-nav" role="navigation">
+                                            <ul class="nav navbar-nav">
+                                                    <li>
+                                                        <a href="{{ Config::get('app.url')  }}" data-toggle="dropdown" class="dropdown-toggle">Home</a>
+                                                    </li>
+                                                    <li class="dropdown yamm-fw">
+                                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">About <b class="caret"></b></a>
+                                                        <ul class="dropdown-menu">
+                                                           <li>
+                                                                <div class="yamm-content">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-7">
+                                                                            <div class="caption hidden-xs">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <img src="http://placehold.it/249x166" alt="">
+                                                                                    </div>
+                                                                                    <div class="col-sm-6"><div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vel, sit eligendi. Consectetur enim accusamus dolores architecto sed itaque illum laudantium, aspernatur a iste temporibus, aliquid dicta amet, consequatur praesentium!</p></div></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <div class="subnav">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6"><ul class="list-unstyled">
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/about/history" class="">History</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/about/vmgo" class="">Vision &amp; Mission</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/about/administration" class="">Administration</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/about/hymn" class="">University Hymn</a></li>
+                                                                                    </ul></div>
+                                                                                    <div class="col-sm-6"><ul class="list-unstyled">
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/about/highlights" class="">UCU Highlights</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/about/maps" class="">Campus Map</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/about/seal" class="">UCU Seal & Symbols</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/about/contact-us" class="">Contact Us</a></li>
+                                                                                    </ul></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                           </li>
+                                                         </ul>
+                                                    </li>
+                                                    <li class="dropdown yamm-fw">
+                                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admissions <b class="caret"></b></a>
+                                                        <ul class="dropdown-menu">
+                                                           <li>
+                                                                <div class="yamm-content">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-7">
+                                                                            <div class="caption hidden-xs">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <img src="http://placehold.it/249x166" alt="">
+                                                                                    </div>
+                                                                                    <div class="col-sm-6"><div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vel, sit eligendi. Consectetur enim accusamus dolores architecto sed itaque illum laudantium, aspernatur a iste temporibus, aliquid dicta amet, consequatur praesentium!</p></div></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <div class="subnav">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6"><ul class="list-unstyled">
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/admission/application-procedures" aria-describedby="campus-life" class="">Application and Enrolment Procedures</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/admission/scholarships" class="">Scholarship Grants</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/admission/graduates" class="">Graduate</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/admission/undergraduates" class="">Undergraduate</a></li>
+                                                                                    </ul></div>
+                                                                                    <div class="col-sm-6"><ul class="list-unstyled">
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/admission/law" class="">Law</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/admission/entrance-examination" class="">Entrance Examination</a></li>
+                                                                                    </ul></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                           </li>
+                                                         </ul>
+                                                    </li>
+                                                    <li class="dropdown yamm-fw">
+                                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Academics <b class="caret"></b></a>
+                                                        <ul class="dropdown-menu">
+                                                           <li>
+                                                                <div class="yamm-content">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-7">
+                                                                            <div class="caption hidden-xs">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <img src="http://placehold.it/249x166" alt="">
+                                                                                    </div>
+                                                                                    <div class="col-sm-6"><div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vel, sit eligendi. Consectetur enim accusamus dolores architecto sed itaque illum laudantium, aspernatur a iste temporibus, aliquid dicta amet, consequatur praesentium!</p></div></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <div class="subnav">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6"><ul class="list-unstyled">
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/academics/graduate-school" aria-describedby="campus-life" class="">Graduate School</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/academics/colleges" class="">Colleges</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/academics/cpd" class="">Center for Continuing and Professional Development</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/academics/research-extensions" class="">Research &amp; Extensions</a></li>
+                                                                                    </ul></div>
+                                                                                    <div class="col-sm-6"><ul class="list-unstyled">
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/academics/student-portal" class="">UCU Student Portal</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/academics/faculty-profile" class="">Faculty Profile</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/academics/academic-calendar" class="">Academic Calendar</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/academics/opac" class="">UCU OPAC</a></li>
+                                                                                    </ul></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                           </li>
+                                                         </ul>
+                                                    </li>
+                                                    <li class="dropdown yamm-fw">
+                                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Campus Life <b class="caret"></b></a>
+                                                        <ul class="dropdown-menu">
+                                                           <li>
+                                                                <div class="yamm-content">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-7">
+                                                                            <div class="caption hidden-xs">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <img src="http://placehold.it/249x166" alt="">
+                                                                                    </div>
+                                                                                    <div class="col-sm-6"><div class="description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vel, sit eligendi. Consectetur enim accusamus dolores architecto sed itaque illum laudantium, aspernatur a iste temporibus, aliquid dicta amet, consequatur praesentium!</p></div></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <div class="subnav">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6"><ul class="list-unstyled">
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/campus-life/student-development" aria-describedby="campus-life" class="">Student Development</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/campus-life/guidance-counseling" class="">Guidance and Counseling</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/campus-life/student-organizations" class="">Student Organizations</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/campus-life/library" class="">Library</a></li>
+                                                                                    </ul></div>
+                                                                                    <div class="col-sm-6"><ul class="list-unstyled">
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/campus-life/arts-culture" class="">Arts &amp; Culture</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/campus-life/civic-welfare" class="">Civil Welfare</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/campus-life/athletics" class="">Athletics</a></li>
+                                                                                        <li><a href="{{ Config::get('app.url')  }}/campus-life/publications" class="">Publications</a></li>
+                                                                                    </ul></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                           </li>
+                                                         </ul>
+                                                    </li>
+
+                                            </ul>
+                                            </nav><!-- /.primary-nav -->
+                                            <div id="audience-nav">
+                                                <div class="">
+                                                    <h3 class="visible-xs">More</h3>
+                                                    <ul class="nav navbar-nav">
+                                                        <li><a href="#">Students</a></li>
+                                                        <li><a href="#">Faculty &amp; Staff</a></li>
+                                                        <li><a href="http://alumni.ucu.edu/">Alumni</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            </div><!-- /.navbar-collapse -->
+                                            </div><!-- /.container -->
+                                        </div>
+                                    </header>
                 @yield('content')
             </body>
             <div class="footer">
@@ -215,7 +259,7 @@
                                                           <li><a href="http://www.facebook.com/UrdanetaCityUniversityPage" target="_blank" class="ficon-facebook" title="Facebook"><span class="icon-facebook"></span><span class="screen-reader">Facebook</span></a></li>
                                                           <li><a href="https://twitter.com/UCUOfficial" target="_blank" class="ficon-twitter" title="Twitter"><span class="icon-twitter"></span><span class="screen-reader">Twitter</span></a></li>
                                                           <li><a href="http://www.youtube.com/user/UrdanetaCityUniversityPage" target="_blank" class="ficon-youtube" title="Youtube"><span class="icon-youtube"></span><span class="screen-reader">YouTube</span></a></li>
-                                                          <li><a href="http://instagram.com/UrdanetaCityUniversityPage#" target="_blank" class="ficon-rss" title="Instagram"><span class="icon-instagram"></span></span><span class="screen-reader">Instagram</span></a></li>
+                                                          <li><a href="https://instagram.com/ucuofficial/" target="_blank" class="ficon-rss" title="Instagram"><span class="icon-instagram"></span></span><span class="screen-reader">Instagram</span></a></li>
                                                     </ul>
                                                 </div>
                             </div>
@@ -244,8 +288,8 @@
                             <ul class="nav">
                             <li><a href="{{ Config::get('app.url') }}/contact">Websites A-Z</a></li>
                             <li><a href="{{ Config::get('app.url') }}/directory">Directory</a></li>
-                            <li><a href="{{ Config::get('app.url') }}/map">Campus Map</a></li>
-                            <li><a href="{{ Config::get('app.url') }}/contact">Contact us</a></li>
+                            <li><a href="{{ Config::get('app.url') }}/maps">Campus Map</a></li>
+                            <li><a href="{{ Config::get('app.url') }}/contact-us">Contact us</a></li>
                             </ul>
                         </div>
                         </div>
@@ -253,7 +297,7 @@
                         </div>
                         <div class="clearfix"> </div>
                     <div class="copy-rights">
-                        <p>&copy; 2015 Urdaneta City University. All Rights Reserved.</p>
+                        <p>&copy; 2016 Urdaneta City University. All Rights Reserved.</p>
                     </div>
                 </div>
                 <script type="text/javascript">
